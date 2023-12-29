@@ -19,7 +19,7 @@ jobs:
       run: echo pandi
     - name: multi line comment
       run: |
-       echo pandi1,
+       echo java -version,
        echo pandi2
      
     
