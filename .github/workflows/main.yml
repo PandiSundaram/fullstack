@@ -15,7 +15,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 17
+    - name: single line comment
       run: echo pandi
+    - name: multi line comment
+      run: |
+       echo pandi1,
+       echo pandi2
      
     
