@@ -1,0 +1,17 @@
+---
+name: spring boot maven
+on:
+  push:
+    branchs:
+      - main
+  pull_request:
+    branchs:
+      - main
+jobs:
+  build:
+    runs-on: ubantu-latest
+    steps:
+      - name: building project
+        uses: actions/checkout@v3
+      - name: printing console
+        run: echo pandi
