@@ -19,7 +19,8 @@ jobs:
       run: echo pandi
     - name: multi line comment
       run: |
-       echo java -version,
+       echo java version,
+       java -version
        echo pandi2
      
     
