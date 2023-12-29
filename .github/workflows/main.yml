@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: single line comment
-      run: echo pandi
+      run: sh ./myscript.sh
     - name: multi line comment
       run: |
        echo java version,
@@ -25,5 +25,7 @@ jobs:
        env
        echo directry,
        ls -a
+       echo print variable
+       
      
     
