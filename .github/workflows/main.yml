@@ -1,17 +1,21 @@
----
-name: spring boot maven
+
+
+name: Java CI with Maven
+
 on:
   push:
-    branchs:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branchs:
-      - main
+    branches: [ "main" ]
+
 jobs:
   build:
-    runs-on: ubantu-latest
+
+    runs-on: ubuntu-latest
+
     steps:
-      - name: building project
-        uses: actions/checkout@v3
-      - name: printing console
-        run: echo pandi
+    - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      run: echo pandi
+     
+    
