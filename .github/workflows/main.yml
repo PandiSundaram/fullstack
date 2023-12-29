@@ -21,6 +21,9 @@ jobs:
       run: |
        echo java version,
        java -version
-       echo pandi2
+       echo env variable,
+       env
+       echo directry,
+       ls -a
      
     
