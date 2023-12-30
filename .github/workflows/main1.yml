@@ -1,0 +1,29 @@
+name: java maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+     runs-on: ubantu-latest
+     
+     steps:
+       - name: step 1:setup checkout
+         uses: actions/checkout@v3
+       - name: step 2:setup jdk
+         uses: actions/setup-java@v4
+         with:
+           java-version: '17'
+       - name: step 3:package app
+         run: mvn -B package --file:maven.xml
+       - name: find artifact 
+         run: |
+             cd target
+             ls -a
+        
+       
+       
+  
