@@ -14,10 +14,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: single line comment
+    - name: step 1:setup checkout
+      uses: actions/checkout@v3
+    - name: step 2:setup java
+      uses: actions/setup-java@v4
+      with: 
+        distribution: 'zulu'
+        java-version: '17'
+    - name: step 3:single line comment
       run: sh ./myscript.sh
-    - name: multi line comment
+    - name: step 4:multi line comment
       run: |
        echo java version,
        java -version
