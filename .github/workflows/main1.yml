@@ -19,7 +19,7 @@ jobs:
            java-version: '17'
            distribution: 'zulu'
        - name: step 3:package app
-         run: mvn -B package --file:maven.xml
+         run: mvn -B package --file:pom.xml
        - name: find artifact 
          run: |
              cd target
